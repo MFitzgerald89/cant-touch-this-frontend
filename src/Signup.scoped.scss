@@ -1,0 +1,44 @@
+.signup {
+  // background-image: url("./assets/shutterstock_177063779.jpg");
+  --background: rgb(243, 237, 233);
+  --padding: 20px;
+  --border-radius: 25px;
+  background: var(--background);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  max-width: 90% !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white;
+}
+
+.signup-submit {
+  --padding: 1px;
+  --width: 30%;
+  --margin: 10px;
+  --border-radius: 5px;
+  --background-color: rgb(243, 237, 233);
+  padding: var(--padding);
+  width: var(--width);
+  margin: var(--margin);
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+}
+
+.signup-submit:hover {
+  cursor: pointer;
+  background-color: rgb(140, 138, 138);
+  color: white;
+}
