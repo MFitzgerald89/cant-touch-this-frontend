@@ -1,0 +1,7 @@
+{
+  "name": "Can't Touch This",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
