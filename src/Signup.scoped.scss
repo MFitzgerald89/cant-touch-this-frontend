@@ -1,11 +1,22 @@
 .signup {
-  // background-image: url("./assets/shutterstock_177063779.jpg");
-  --background: rgb(243, 237, 233);
+  --background-image: url(src/cant-touch-this-image.jpeg);
   --padding: 20px;
   --border-radius: 25px;
-  background: var(--background);
+  --height: 100vh;
+  --width: 100vw;
+  --align-items: center;
+  --background-repeat: no-repeat;
+  background-image: var(--background-image) ;
   padding: var(--padding);
   border-radius: var(--border-radius);
+  height: var(--height);
+  width: var(--width);
+  align-items: var(--align-items);
+  background-repeat: var(--background-repeat);
+}
+
+.form {
+  text-align: center;
 }
 
 .form-group {
@@ -15,7 +26,8 @@
 .form-group input {
   margin-left: 30px;
   margin-bottom: 10px;
-  max-width: 90% !important;
+  text-align: center !important;
+  max-width: 100vw !important;
 }
 
 input:-webkit-autofill {
@@ -23,12 +35,14 @@ input:-webkit-autofill {
 }
 
 .signup-submit {
-  --padding: 1px;
-  --width: 30%;
+  --padding: 5px;
+  --box-shadow: 1px 1px 10px black;
+  --width: 100%;
   --margin: 10px;
-  --border-radius: 5px;
-  --background-color: rgb(243, 237, 233);
+  --border-radius: 10px;
+  --background-color: rgb(40, 215, 238);
   padding: var(--padding);
+  box-shadow: var(--box-shadow);
   width: var(--width);
   margin: var(--margin);
   border: none;
@@ -38,7 +52,8 @@ input:-webkit-autofill {
 }
 
 .signup-submit:hover {
-  cursor: pointer;
-  background-color: rgb(140, 138, 138);
+  --background-color: rgb(30, 168, 242);
+  background-color: var(--background-color);
   color: white;
+  cursor: pointer;
 }
