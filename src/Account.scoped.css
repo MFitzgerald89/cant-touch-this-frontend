@@ -1,0 +1,33 @@
+.account-show {
+  --height: 100vh;
+  height: var(--height);
+  --background-image: url(src/cant-touch-this-image.jpeg);
+  --background-color: black;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40%;
+  padding-top: 15%;
+}
+
+form {
+  color: white;
+}
+
+form input {
+  background-color: gray;
+  border: none;
+}/*# sourceMappingURL=Account.scoped.css.map */
