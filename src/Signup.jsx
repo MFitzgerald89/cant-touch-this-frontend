@@ -14,7 +14,7 @@ export function Signup() {
       const formData = new FormData(event.target);
       const response = await axios.post("/users.json", formData);
       event.target.reset();
-      window.location.href = "/";
+      window.location.href = "/car_washes";
     } catch (error) {
       console.log(error.response.data.errors);
       setErrors(error.response.data.errors);
@@ -34,8 +34,12 @@ export function Signup() {
           <form onSubmit={handleSubmit}>
             <IonList>
               <IonItem>
-                <IonLabel position="stacked">Name</IonLabel>
-                <IonInput type="text" name="name" placeholder="First Name Last Name"></IonInput>
+                <IonLabel position="stacked">First Name</IonLabel>
+                <IonInput type="text" name="first-name" placeholder="First Name"></IonInput>
+              </IonItem>
+              <IonItem>
+                <IonLabel position="stacked">Last Name</IonLabel>
+                <IonInput type="text" name="last-name" placeholder="Last Name"></IonInput>
               </IonItem>
               <IonItem>
                 <IonLabel position="stacked">Email</IonLabel>

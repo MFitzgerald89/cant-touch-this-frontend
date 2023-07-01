@@ -6,6 +6,7 @@ export function Account(props) {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onUpdateUser(params, props.userData.id);
+    window.location.href = "https://maps.google.com";
   };
   return (
     <div className="account-show">

@@ -3,6 +3,7 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
 import Signup from "./Signup";
+import axios from "axios";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -25,6 +26,14 @@ import "./theme/variables.css";
 
 setupIonicReact();
 
+const [carWashes, setCarWashes] = useState({});
+
+const handleIndexCarWashes = () => {
+  axios.get("/car_washes.json").then(function (response) {
+    setCarWashes(response.data);
+  });
+};
+
 const App = () => (
   <IonApp>
     <IonReactRouter>
@@ -35,9 +44,18 @@ const App = () => (
         <Route exact path="/home">
           <Home />
         </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+        <Route
+          exact
+          path="/"
+          element={
+            <CarWashesIndex
+              carwashes={carwashes}
+              onShowCarWash={handleCarWashShow}
+              onUpdateLocation={handleUpdateLocation}
+              userData={currentUserShow}
+            />
+          }
+        ></Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
