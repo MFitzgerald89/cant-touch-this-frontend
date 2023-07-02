@@ -1,20 +1,26 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { IonButton, IonContent, IonInput, IonItem, IonLabel, IonList, IonSelect, IonSelectOption } from "@ionic/react";
 import axios from "axios";
 import "./Signup.scoped.scss";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
+  const history = useHistory();
 
-  const handleSubmit = async (event) => {
+  const handleIndexCarWashes = async (event) => {
     event.preventDefault();
     setErrors([]);
 
     try {
       const formData = new FormData(event.target);
-      const response = await axios.post("/users.json", formData);
+      await axios.post("/users.json", formData);
       event.target.reset();
-      window.location.href = "/car_washes";
+
+      const response = await axios.get("http://localhost:3000/car_washes.json");
+      setCarWashes(response.data);
+
+      history.push("/car_washes");
     } catch (error) {
       console.log(error.response.data.errors);
       setErrors(error.response.data.errors);
@@ -31,7 +37,7 @@ export function Signup() {
           ))}
         </ul>
         <div className="form-container">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleIndexCarWashes}>
             <IonList>
               <IonItem>
                 <IonLabel position="stacked">First Name</IonLabel>
@@ -128,4 +134,5 @@ export function Signup() {
     </IonContent>
   );
 }
+
 export default Signup;
