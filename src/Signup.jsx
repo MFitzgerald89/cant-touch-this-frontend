@@ -1,29 +1,38 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { IonButton, IonContent, IonInput, IonItem, IonLabel, IonList, IonSelect, IonSelectOption } from "@ionic/react";
+import { IonContent, IonButton, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonList } from "@ionic/react";
 import axios from "axios";
-import "./Signup.scoped.scss";
 
-export function Signup() {
+const Signup = () => {
   const [errors, setErrors] = useState([]);
-  const history = useHistory();
+  const [carWashes, setCarWashes] = useState([]);
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
 
-  const handleIndexCarWashes = async (event) => {
+  const handleSignup = async (event) => {
     event.preventDefault();
     setErrors([]);
 
     try {
-      const formData = new FormData(event.target);
-      await axios.post("/users.json", formData);
-      event.target.reset();
+      const formData = new FormData(event.currentTarget);
+      formData.append("city", city);
+      formData.append("state", state);
+      await axios.post("http://localhost:3000/users.json", formData);
+      event.currentTarget.reset();
 
+      // Fetch car washes after successful signup
+      await fetchCarWashes();
+    } catch (error) {
+      setErrors(error.response.data.errors);
+    }
+  };
+
+  const fetchCarWashes = async () => {
+    try {
       const response = await axios.get("http://localhost:3000/car_washes.json");
       setCarWashes(response.data);
-
-      history.push("/car_washes");
+      setErrors([]);
     } catch (error) {
-      console.log(error.response.data.errors);
-      setErrors(error.response.data.errors);
+      setErrors(error.response.data.errors || ["An error occurred"]);
     }
   };
 
@@ -31,21 +40,21 @@ export function Signup() {
     <IonContent>
       <div className="signup">
         <h3 className="text-center">Signup</h3>
-        <ul>
+        {/* <ul>
           {errors.map((error) => (
             <li key={error}>{error}</li>
           ))}
-        </ul>
+        </ul> */}
         <div className="form-container">
-          <form onSubmit={handleIndexCarWashes}>
+          <form onSubmit={handleSignup}>
             <IonList>
               <IonItem>
                 <IonLabel position="stacked">First Name</IonLabel>
-                <IonInput type="text" name="first-name" placeholder="First Name"></IonInput>
+                <IonInput type="text" name="first_name" placeholder="First Name"></IonInput>
               </IonItem>
               <IonItem>
                 <IonLabel position="stacked">Last Name</IonLabel>
-                <IonInput type="text" name="last-name" placeholder="Last Name"></IonInput>
+                <IonInput type="text" name="last_name" placeholder="Last Name"></IonInput>
               </IonItem>
               <IonItem>
                 <IonLabel position="stacked">Email</IonLabel>
@@ -56,16 +65,26 @@ export function Signup() {
                 <IonInput type="password" name="password" placeholder="Password"></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">Password Confirmation</IonLabel>
-                <IonInput type="password" name="password_confirmation" placeholder="Password Confirmation"></IonInput>
+                <IonLabel position="stacked">Confirm Password</IonLabel>
+                <IonInput
+                  type="password_confirmation"
+                  name="password_confirmation"
+                  placeholder="password_confirmation"
+                ></IonInput>
               </IonItem>
               <IonItem>
                 <IonLabel position="stacked">City</IonLabel>
-                <IonInput type="text" name="city" placeholder="City"></IonInput>
+                <IonInput
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                  value={city}
+                  onIonChange={(e) => setCity(e.detail.value)}
+                ></IonInput>
               </IonItem>
               <IonItem>
                 <IonLabel position="stacked">State</IonLabel>
-                <IonSelect name="state" placeholder="State">
+                <IonSelect name="state" placeholder="State" value={state} onIonChange={(e) => setState(e.detail.value)}>
                   <>
                     <IonSelectOption value="Alabama">Alabama</IonSelectOption>
                     <IonSelectOption value="Alaska">Alaska</IonSelectOption>
@@ -118,8 +137,6 @@ export function Signup() {
                     <IonSelectOption value="Wisconsin">Wisconsin</IonSelectOption>
                     <IonSelectOption value="Wyoming">Wyoming</IonSelectOption>
                   </>
-
-                  {/* Add other options for different states */}
                 </IonSelect>
               </IonItem>
             </IonList>
@@ -133,6 +150,6 @@ export function Signup() {
       </div>
     </IonContent>
   );
-}
+};
 
 export default Signup;
