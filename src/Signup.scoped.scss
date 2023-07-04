@@ -2,6 +2,7 @@
   --background-image: url(src/cant-touch-this-image.jpeg);
   --padding: 20px;
   --border-radius: 25px;
+  --border-style: solid;
   --height: 100vh;
   --width: 100vw;
   --align-items: center;
@@ -9,11 +10,48 @@
   background-image: var(--background-image) ;
   padding: var(--padding);
   border-radius: var(--border-radius);
+  border-style: var(--border-style);
+  border-width: 10px;
+  border-color: rgba(37, 27, 114, 0.544);
   height: var(--height);
   width: var(--width);
   align-items: var(--align-items);
   background-repeat: var(--background-repeat);
+  background: linear-gradient(rgb(43, 165, 232,0.5), rgba(0, 0, 0, 0.5)), var(--background-image);
+  text-align: center;
 }
+
+h3 {
+  font-family: Lexend ;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+ion-list {
+  opacity: 50%;
+  font-family: 'Lexend Peta', sans-serif;
+
+
+ion-item {
+  border-radius: 25px;
+  padding: 2px 2px 2px;
+  
+ion-label {
+  display:inline-block;
+  border-radius: 25px;
+  box-shadow: 0 0 5px blue;
+  text-align: center;
+  font-family: 'Lexend Peta', sans-serif;
+
+  ion-input[id="first_name"] {
+  color: blue;
+  }
+  
+}
+}
+}
+
 
 .form {
   text-align: center;
@@ -40,7 +78,7 @@ input:-webkit-autofill {
   --width: 100%;
   --margin: 10px;
   --border-radius: 10px;
-  --background-color: rgb(40, 215, 238);
+  --background-color: rgb(246, 244, 170);
   padding: var(--padding);
   box-shadow: var(--box-shadow);
   width: var(--width);
@@ -49,6 +87,9 @@ input:-webkit-autofill {
   outline: none;
   border-radius: var(--border-radius);
   background-color: var(--background-color);
+  display: block;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup-submit:hover {

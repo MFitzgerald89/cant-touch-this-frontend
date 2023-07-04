@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IonContent, IonButton, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonList } from "@ionic/react";
 import axios from "axios";
+import "./Signup.scoped.scss";
 
 const Signup = () => {
   const [errors, setErrors] = useState([]);
@@ -50,7 +51,7 @@ const Signup = () => {
             <IonList>
               <IonItem>
                 <IonLabel position="stacked">First Name</IonLabel>
-                <IonInput type="text" name="first_name" placeholder="First Name"></IonInput>
+                <IonInput id="first_name" type="text" name="first_name" placeholder="First Name"></IonInput>
               </IonItem>
               <IonItem>
                 <IonLabel position="stacked">Last Name</IonLabel>

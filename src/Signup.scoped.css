@@ -1,22 +1,50 @@
-Copy code
 .signup {
   --background-image: url(src/cant-touch-this-image.jpeg);
   --padding: 20px;
   --border-radius: 25px;
+  --border-style: solid;
+  --height: 100vh;
+  --width: 100vw;
   --align-items: center;
   --background-repeat: no-repeat;
-  --background-size: cover;
-
   background-image: var(--background-image);
-  background-repeat: var(--background-repeat);
-  background-size: var(--background-size);
-
   padding: var(--padding);
   border-radius: var(--border-radius);
+  border-style: var(--border-style);
+  border-width: 10px;
+  border-color: rgba(37, 27, 114, 0.544);
+  height: var(--height);
+  width: var(--width);
   align-items: var(--align-items);
+  background-repeat: var(--background-repeat);
+  background: linear-gradient(rgba(43, 165, 232, 0.5), rgba(0, 0, 0, 0.5)), var(--background-image);
+  text-align: center;
+}
 
-  width: 100%;
-  height: 100%;
+h3 {
+  font-family: Lexend;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+ion-list {
+  opacity: 50%;
+  font-family: "Lexend Peta", sans-serif;
+}
+ion-list ion-item {
+  border-radius: 25px;
+  padding: 2px 2px 2px;
+}
+ion-list ion-item ion-label {
+  display: inline-block;
+  border-radius: 25px;
+  box-shadow: 0 0 5px blue;
+  text-align: center;
+  font-family: "Lexend Peta", sans-serif;
+}
+ion-list ion-item ion-label ion-input[id=first_name] {
+  color: blue;
 }
 
 .form {
@@ -31,16 +59,7 @@ Copy code
   margin-left: 30px;
   margin-bottom: 10px;
   text-align: center !important;
-}
-
-.form-container {
-  max-width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 100vw !important;
 }
 
 input:-webkit-autofill {
@@ -53,7 +72,7 @@ input:-webkit-autofill {
   --width: 100%;
   --margin: 10px;
   --border-radius: 10px;
-  --background-color: rgb(40, 215, 238);
+  --background-color: rgb(246, 244, 170);
   padding: var(--padding);
   box-shadow: var(--box-shadow);
   width: var(--width);
@@ -62,6 +81,9 @@ input:-webkit-autofill {
   outline: none;
   border-radius: var(--border-radius);
   background-color: var(--background-color);
+  display: block;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup-submit:hover {
