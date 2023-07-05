@@ -50,33 +50,25 @@ const Signup = () => {
           <form onSubmit={handleSignup}>
             <IonList>
               <IonItem>
-                <IonLabel id="first_name" position="stacked">
-                  First Name
-                </IonLabel>
                 <IonInput id="first_name" type="text" name="first_name" placeholder="First Name"></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">Last Name</IonLabel>
                 <IonInput type="text" name="last_name" placeholder="Last Name"></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">Email</IonLabel>
                 <IonInput type="email" name="email" placeholder="Email"></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">Password</IonLabel>
                 <IonInput type="password" name="password" placeholder="Password"></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">Confirm Password</IonLabel>
                 <IonInput
                   type="password_confirmation"
                   name="password_confirmation"
-                  placeholder="password_confirmation"
+                  placeholder="Confirm Password"
                 ></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">City</IonLabel>
                 <IonInput
                   type="text"
                   name="city"
@@ -86,7 +78,6 @@ const Signup = () => {
                 ></IonInput>
               </IonItem>
               <IonItem>
-                <IonLabel position="stacked">State</IonLabel>
                 <IonSelect name="state" placeholder="State" value={state} onIonChange={(e) => setState(e.detail.value)}>
                   <>
                     <IonSelectOption value="Alabama">Alabama</IonSelectOption>

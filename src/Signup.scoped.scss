@@ -11,7 +11,7 @@
   --padding: 20px;
   --border-radius: 25px;
   --border-style: solid;
-  --height: 100vh;
+  --height: auto;
   --width: 100vw;
   --align-items: center;
   --background-repeat: no-repeat;
@@ -19,49 +19,56 @@
   padding: var(--padding);
   border-radius: var(--border-radius);
   border-style: var(--border-style);
-  border-width: 15px;
+  border-width: 5px;
   border-color: rgba(4, 153, 246, 0.7);
   height: var(--height);
   width: var(--width);
   align-items: var(--align-items);
   background-repeat: var(--background-repeat);
-  background: linear-gradient(rgba(4, 153, 246, 0.5), rgba(248, 224, 91, 0.5)), var(--background-image);
+  background: linear-gradient(rgba(4, 153, 246, 0.5), rgba(248, 224, 91, 0.7)), var(--background-image);
   text-align: center;
   margin: auto;
   background-size: cover;
 }
 
 h3 {
-  font-family: Lexend ;
+  font-family: 'Lexend Peta', sans-serif ;
+  font-weight: 800;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
+  margin: auto;
+  padding: 27px;
+  height: 90px;
+  border-top-left-radius: 3.5em;
+  border-bottom-right-radius: 3.5em;
+  border-style: solid;
+  background-color: white;
 }
 
 ion-list {
   opacity: 100%;
   font-family: 'Lexend Peta', sans-serif;
-  border-radius: 10px;
-  background-color: black;
+  border-radius: 20px;
+  height: auto;
 
 ion-item {
-  padding: 2.5px 10px 1px;
-  color: rgb(0, 0, 0, .5);
-  background-color: rgb(4, 107, 136, 0.952);
-  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(4, 153, 246);
+  border-radius: 0;
+  border-top-left-radius: 3.5em;
+  border-bottom-right-radius: 3.5em;
+  border-width: 1px;
+  margin: 10px;
+  height: auto;
+  width: 315px;
+}
+}
 
-  
-ion-label {
-  background-color: rgb(4, 107, 136, 0.952);
-  display:inline-block;
-  border-radius: 25px;
-  box-shadow: 0 0 10px rgb(14, 14, 14), 0 0 12px black;
-  text-align: center;
-  font-family: 'Lexend Peta', sans-serif;
-  
+.list-ios {
+  background: transparent;
 }
-}
-}
+
+
 
 ion-button.button-solid {
   background-image: linear-gradient(rgb(245, 213, 8, .5), rgb(0, 0, 0, .5)) !important;
@@ -71,11 +78,12 @@ ion-button.button-solid {
   padding: .5em;
 }
 
-div {
-  background-color: transparent;
-  color: black;
-  text-shadow: 0 0 1px rgb(4, 107, 136, 0.952), 0 0 2px rgb(4, 107, 136, 0.952), 0 0 3px rgb(4, 107, 136, 0.952);
-}
+// div {
+//   background-color: transparent;
+//   color: black;
+//   text-shadow: 0 0 1px rgb(4, 107, 136, 0.952), 0 0 2px rgb(4, 107, 136, 0.952), 0 0 3px rgb(4, 107, 136, 0.952);
+  
+// }
 
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0px 9999px white;
