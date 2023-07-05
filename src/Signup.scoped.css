@@ -1,3 +1,12 @@
+:root {
+  --ion-color-primary: #d8ca6e !important;
+  --ion-color-primary-rgb: 216,202,110;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0,0,0;
+  --ion-color-primary-shade: #beb261;
+  --ion-color-primary-tint: #dccf7d;
+}
+
 .signup {
   --background-image: url(src/cant-touch-this-image.jpeg);
   --padding: 20px;
@@ -7,18 +16,19 @@
   --width: 100vw;
   --align-items: center;
   --background-repeat: no-repeat;
-  background-image: var(--background-image);
   padding: var(--padding);
   border-radius: var(--border-radius);
   border-style: var(--border-style);
-  border-width: 10px;
-  border-color: rgba(37, 27, 114, 0.544);
+  border-width: 15px;
+  border-color: rgba(4, 153, 246, 0.7);
   height: var(--height);
   width: var(--width);
   align-items: var(--align-items);
   background-repeat: var(--background-repeat);
-  background: linear-gradient(rgba(43, 165, 232, 0.5), rgba(0, 0, 0, 0.5)), var(--background-image);
+  background: linear-gradient(rgba(4, 153, 246, 0.5), rgba(248, 224, 91, 0.5)), var(--background-image);
   text-align: center;
+  margin: auto;
+  background-size: cover;
 }
 
 h3 {
@@ -29,37 +39,38 @@ h3 {
 }
 
 ion-list {
-  opacity: 50%;
+  opacity: 100%;
   font-family: "Lexend Peta", sans-serif;
+  border-radius: 10px;
+  background-color: black;
 }
 ion-list ion-item {
-  border-radius: 25px;
-  padding: 2px 2px 2px;
+  padding: 2.5px 10px 1px;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(4, 107, 136, 0.952);
+  border-radius: 10px;
 }
 ion-list ion-item ion-label {
+  background-color: rgba(4, 107, 136, 0.952);
   display: inline-block;
   border-radius: 25px;
-  box-shadow: 0 0 5px blue;
+  box-shadow: 0 0 10px rgb(14, 14, 14), 0 0 12px black;
   text-align: center;
   font-family: "Lexend Peta", sans-serif;
 }
-ion-list ion-item ion-label ion-input[id=first_name] {
-  color: blue;
+
+ion-button.button-solid {
+  background-image: linear-gradient(rgba(245, 213, 8, 0.5), rgba(0, 0, 0, 0.5)) !important;
+  border-style: solid;
+  border-color: rgb(245, 213, 8);
+  box-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px white, 0 0 4px black, 0 0 5px rgba(245, 213, 8, 0.5), 0 0 6px white, 0 0 7px black;
+  padding: 0.5em;
 }
 
-.form {
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-.form-group input {
-  margin-left: 30px;
-  margin-bottom: 10px;
-  text-align: center !important;
-  max-width: 100vw !important;
+div {
+  background-color: transparent;
+  color: black;
+  text-shadow: 0 0 1px rgba(4, 107, 136, 0.952), 0 0 2px rgba(4, 107, 136, 0.952), 0 0 3px rgba(4, 107, 136, 0.952);
 }
 
 input:-webkit-autofill {
@@ -68,15 +79,15 @@ input:-webkit-autofill {
 
 .signup-submit {
   --padding: 5px;
-  --box-shadow: 1px 1px 10px black;
+  --box-shadow: 1px 1px 10px rgb(246, 210, 6);
   --width: 100%;
-  --margin: 10px;
+  --margin-top: 13px auto 1px;
   --border-radius: 10px;
   --background-color: rgb(246, 244, 170);
   padding: var(--padding);
   box-shadow: var(--box-shadow);
   width: var(--width);
-  margin: var(--margin);
+  margin: var(--margin-top);
   border: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -84,11 +95,5 @@ input:-webkit-autofill {
   display: block;
   align-items: center;
   justify-content: center;
-}
-
-.signup-submit:hover {
-  --background-color: rgb(30, 168, 242);
-  background-color: var(--background-color);
-  color: white;
-  cursor: pointer;
+  color: black;
 }/*# sourceMappingURL=Signup.scoped.css.map */

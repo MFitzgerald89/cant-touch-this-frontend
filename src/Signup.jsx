@@ -50,7 +50,9 @@ const Signup = () => {
           <form onSubmit={handleSignup}>
             <IonList>
               <IonItem>
-                <IonLabel position="stacked">First Name</IonLabel>
+                <IonLabel id="first_name" position="stacked">
+                  First Name
+                </IonLabel>
                 <IonInput id="first_name" type="text" name="first_name" placeholder="First Name"></IonInput>
               </IonItem>
               <IonItem>
