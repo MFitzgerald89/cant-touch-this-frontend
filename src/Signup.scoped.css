@@ -33,16 +33,17 @@
 
 h3 {
   font-family: "Lexend Peta", sans-serif;
-  font-weight: 800;
+  font-size: larger;
+  font-weight: bolder;
   align-items: center;
   justify-content: center;
   margin: auto;
   padding: 27px;
-  height: 90px;
-  border-top-left-radius: 3.5em;
-  border-bottom-right-radius: 3.5em;
+  height: 100px;
+  border-top-left-radius: 2.5em;
+  border-bottom-right-radius: 2.5em;
   border-style: solid;
-  background-color: white;
+  background-image: linear-gradient(white, rgb(244, 201, 9));
 }
 
 ion-list {
@@ -59,7 +60,7 @@ ion-list ion-item {
   border-bottom-right-radius: 3.5em;
   border-width: 1px;
   margin: 10px;
-  height: auto;
+  height: 110px;
   width: 315px;
 }
 
