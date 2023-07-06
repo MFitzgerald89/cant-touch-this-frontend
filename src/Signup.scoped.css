@@ -32,7 +32,7 @@
 }
 
 h3 {
-  font-family: "Lexend Peta", sans-serif;
+  font-family: "Lexend Peta", sans-serif !important;
   font-size: larger;
   font-weight: bolder;
   align-items: center;
@@ -44,11 +44,13 @@ h3 {
   border-bottom-right-radius: 2.5em;
   border-style: solid;
   background-image: linear-gradient(white, rgb(244, 201, 9));
+  color: black;
+  text-shadow: 0 0 1px goldenrod, 0 0 2px goldenrod, 0 0 3px goldenrod, 0 0 4px goldenrod, 10px 0 5px white, 5px 0 6px grey, 15px 0 7px grey, 0 5px 8px grey, 0 10px 9px grey;
 }
 
 ion-list {
   opacity: 100%;
-  font-family: "Lexend Peta", sans-serif;
+  font-family: "Lexend Peta", sans-serif !important;
   border-radius: 20px;
   height: auto;
 }
@@ -62,10 +64,12 @@ ion-list ion-item {
   margin: 10px;
   height: 110px;
   width: 315px;
+  color: white !important;
 }
 
 .list-ios {
   background: transparent;
+  color: white;
 }
 
 ion-button.button-solid {
