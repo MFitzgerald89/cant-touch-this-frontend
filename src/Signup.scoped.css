@@ -5,6 +5,7 @@
   --ion-color-primary-contrast-rgb: 0,0,0;
   --ion-color-primary-shade: #beb261;
   --ion-color-primary-tint: #dccf7d;
+  background: transparent;
 }
 
 .signup {
@@ -53,6 +54,8 @@ ion-list {
   font-family: "Lexend Peta", sans-serif !important;
   border-radius: 20px;
   height: auto;
+  background: transparent;
+  color: transparent;
 }
 ion-list ion-item {
   padding: 20px;
@@ -65,11 +68,27 @@ ion-list ion-item {
   height: 110px;
   width: 315px;
   color: white !important;
+  text-transform: uppercase;
+}
+ion-list ion-item ion-input {
+  color: black !important;
+  margin-top: 15px;
+  text-align: center;
+}
+
+div.item-native::after {
+  border-top-left-radius: 3.5em !important;
+  border-bottom-right-radius: 3.5em !important;
+}
+
+ion-select {
+  color: black !important;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .list-ios {
   background: transparent;
-  color: white;
 }
 
 ion-button.button-solid {
@@ -78,6 +97,7 @@ ion-button.button-solid {
   border-color: rgb(245, 213, 8);
   box-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px white, 0 0 4px black, 0 0 5px rgba(245, 213, 8, 0.5), 0 0 6px white, 0 0 7px black;
   padding: 0.5em;
+  border-collapse: collapse;
 }
 
 input:-webkit-autofill {

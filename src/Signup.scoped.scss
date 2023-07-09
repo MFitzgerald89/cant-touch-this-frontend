@@ -5,6 +5,7 @@
 	--ion-color-primary-contrast-rgb: 0,0,0;
 	--ion-color-primary-shade: #beb261;
 	--ion-color-primary-tint: #dccf7d;
+  background: transparent;
 }
 .signup {
   --background-image: url(src/cant-touch-this-image.jpeg);
@@ -48,11 +49,14 @@ h3 {
   text-shadow: 0 0 1px goldenrod, 0 0 2px goldenrod, 0 0 3px goldenrod, 0 0 4px goldenrod, 10px 0 5px white, 5px 0 6px grey, 15px 0 7px grey, 0 5px 8px grey, 0 10px 9px grey;
 }
 
+
 ion-list {
   opacity: 100%;
   font-family: 'Lexend Peta', sans-serif !important;
   border-radius: 20px;
   height: auto;
+  background: transparent;
+  color: transparent;
 
 ion-item {
   padding: 20px;
@@ -65,12 +69,30 @@ ion-item {
   height: 110px;
   width: 315px;
   color: white !important;
+  text-transform: uppercase;
+
+  ion-input {
+    color: black !important;
+    margin-top: 15px;
+    text-align: center;
+  }
 }
 }
 
+div.item-native::after {
+  border-top-left-radius: 3.5em !important;
+  border-bottom-right-radius: 3.5em !important;
+}
+
+ion-select {
+  color: black !important;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
 .list-ios {
   background: transparent;
-  color: white;
 }
 
 
@@ -81,6 +103,7 @@ ion-button.button-solid {
   border-color:  rgb(245, 213, 8);
   box-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px white, 0 0 4px black, 0 0 5px rgb(245, 213, 8, .5), 0 0 6px white, 0 0 7px black;
   padding: .5em;
+  border-collapse: collapse;
 }
 
 // div {
@@ -114,4 +137,5 @@ input:-webkit-autofill {
   justify-content: center;
   color: black;
 }
+
 
