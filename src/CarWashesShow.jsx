@@ -24,7 +24,7 @@ const MapContainer = () => {
 
   const fetchCarWashes = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/carwashes/1.json`); // Replace with your backend endpoint for fetching car washes data
+      const response = await axios.get(`http://localhost:3000/carwashes.json`); // Replace with your backend endpoint for fetching car washes data
       setCarWashes(response.data);
     } catch (error) {
       console.error("Error fetching car washes:", error);

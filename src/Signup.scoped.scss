@@ -8,7 +8,8 @@
   ;
 }
 .ios body {
-  --ion-background-color: rgba(4, 153, 246, 0.7) !important;
+  --ion-background-color: rgba(4, 153, 246, 0.7);
+  background-color: var(--ion-background-color) !important;
 }
 
 .signup {
@@ -43,7 +44,7 @@ h3 {
   align-items: center;
   justify-content: center;
   margin: auto;
-  padding: 27px;
+  padding: 34px;
   height: 100px;
   border-radius: 10em;
   border-style: solid;
@@ -82,6 +83,7 @@ ion-item {
     text-align: center;
     font-weight: 800;
     border-radius: 10em;
+    padding: 20px;
     
   }
 }
@@ -90,7 +92,7 @@ ion-item {
 div.item-inner.item-highlight {
   border-top-left-radius: 3.5em !important;
   border-bottom-right-radius: 3.5em !important;
-  background-color: white !important;
+  background-color: black !important;
 }
 
 ion-select {
